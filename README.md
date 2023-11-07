@@ -1,2 +1,4 @@
 # Portfolio-inicial
- Primeiro repositório do portfólio
+
+repositório criado para alocar projeto de um site de portfolio
+
