@@ -11,7 +11,7 @@
   --color-pink: #d12f7a;
   --color-blue: #073fcc;
   --color-black: #0c0c0c;
-  --color-purple: #5f01ac; 
+  --color-purple: #5f01ac;
 }
 
 html {
@@ -28,7 +28,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  background: red; 
+  background: var(--color-black);
 }
 
 .person-content {
@@ -41,13 +41,44 @@ body {
   background: var(--color-black);
 }
 
-.person-content div h1, p {
+.person-content div h1,
+.person-content div p {
+  padding: 0 4px;
   color: transparent;
-  padding: 0px 4px;
   position: relative;
+  width: fit-content;
   font-size: 4.5rem;
   line-height: 6rem;
-  animation: written_text .5s forwards;
+  animation: written_text 3s ease forwards;
+}
+
+.person-content div h1 {
+  animation-delay: 1s;
+}
+
+.person-content div p {
+  animation: written_text 2.5s ease forwards;
+  animation-delay: 2s;
+}
+
+.person-content div h1 span,
+.person-content div p span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color-pink);
+  animation: written_text_box 1s ease;
+  animation-delay: 0.5s;
+}
+
+.person-content div h1 span {
+  animation-delay: 0.5s;
+}
+
+.person-content div p span {
+  animation-delay: 1.5s;
 }
 
 .person-content div h1:nth-child(1) {
@@ -55,32 +86,32 @@ body {
 }
 
 .person-content div p:nth-child(2) {
-  animation-delay: 1.5s;
-}
-
-.person-content div p:nth-child(3) {
-  animation: written_text_name .5s ease forwards;
+  animation: written_text 2.5s ease forwards;
   animation-delay: 2s;
 }
 
-.person-content div h1 span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0px;
-  height: 100%;
-  background: var(--color-pink);
-  animation: written_text_box 1s ease;
+.person-content div p:nth-child(3) {
+  animation: written_text_name 3s ease forwards;
+  animation-delay: 3s;
 }
 
-.person-content div p span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0px;
-  height: 100%;
-  background: var(--color-pink);
-  animation: written_text_box 1s ease;
+.person-content div h1:nth-child(1) span {
+  animation-delay: 0.5s;
+}
+
+.person-content div p:nth-child(2) span {
+  animation-delay: 1.5s;
+}
+
+.person-content div p:nth-child(3) span {
+  animation-delay: 2.8s;
+}
+
+.stacks-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 @keyframes written_text {
