@@ -160,6 +160,62 @@ body {
   color: var(--color-white);
 }
 
+.person-background {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(assets/img/background-image.jpg);
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+
+.person-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(90deg, transparent 30%, var(--color-black));
+}
+
+.wrapper-profile-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  padding: 5px;
+  margin:50px 15px;
+  border-radius: 50%;
+  background: radial-gradient(rgba(0,0,0,0.15) 60%, transparent 0),
+  radial-gradient(#000 50%, transparent 0),
+  linear-gradient(to top right, #ffa500 0%, #ff1493 100%);
+}
+
+.profile-photo {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.links a img {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  filter: brightness(.8);
+  transition: all .3s ease;
+}
+
+.links a img:hover {
+  transform: scale(1.2);
+  transition: brightness(1);
+}
+
 @keyframes written_text {
   100% {
     color: var(--color-white);
